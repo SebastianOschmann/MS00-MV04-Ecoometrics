@@ -202,32 +202,186 @@ success_msg("Nice work!")
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
 
-Have a look at Task 1 e) from Problem Set 1. 
+Consider the following vector: 
+
+$$d = \frac{1} {(e^{28} + log(9))} \cdot [7 \; 1.5 \; 3 \; 4 \; 9]$$
+
 
 *** =instructions
-Vektor d ist erstellt. 
-$d = 1 / (exp(28) + log(9)) * [7 1.5 3 4 9]$
+i. Extract the third element of the vector d and store this element in i.
 
+ii. Extract the the first two elements of the vector d and store this elements in ii.
+
+iii. Extract the last element of the vector d and store this element in iii.
 
 *** =hint
+You can use square brackets to extract elements from a vector!
+
 
 *** =pre_exercise_code
 ```{r}
-
+d <- 1/(exp(28)+log(9))*c(7,1.5,3,4,9)
 ```
 
 *** =sample_code
 ```{r}
+# vector d has already been created
+# Subtask i.
+i <- 
+
+# Subtask ii.
+ii <- 
+
+# Subtask iii.
+iii <- 
 
 ```
 
 *** =solution
 ```{r}
+i   <- d[3]
+ii  <- d[1:2]
+iii <- d[5]
 
 
 ```
 
 *** =sct
 ```{r}
+test_object("i", incorrect_msg = "Attention, something is wrong with the vector i!")
+test_object("ii", incorrect_msg = "Attention, something is wrong with the vector ii!")
+test_object("iii", incorrect_msg = "Attention, something is wrong with the vector iii!")
+
+test_error()
+success_msg("Nice work!")
+```
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:34e0148626
+## Matrices I
+
+##### Proposed editing time: < 5 min. 
+##### Level: medium
+
+
+Have a look at the matrix C: 
+
+$$C = 
+\begin{bmatrix}
+1 & 4 & 7 \newline
+2 & 5 & 8 \newline
+3 & 6 & 9
+\end{bmatrix}$$  
+
+Which command delivers the elements $1 \; 2 \; 3$?
+
+
+*** =instructions
+- C[1,2,3]
+- C[1, ]
+- C[ ,1]
+- C[1]
+
+*** =hint
+You can use matrix[row,column] to extract elements from a matrix!
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+msg_success <- "Exactly!"
+test_mc(correct = 3)
+
+```
+
+
+--- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:dc47c431fc
+## Matrices II
+
+##### Proposed editing time: < 5 min. 
+##### Level: medium
+
+
+Have a look at the matrix D: 
+
+$$D = 
+\begin{bmatrix}
+1 & 5 & 7 & 2 \newline
+5 & 1 & 8 & 4 \newline
+2 & 6 & 1 & 7 \newline
+4 & 3 & 2 & 1
+\end{bmatrix}$$  
+
+Which command delivers the elements $2 \; 6 \; 1 \; 7$?
+
+
+*** =instructions
+- D[3 ]
+- D[ ,3]
+- D[3; ]
+- D[3, ]
+
+*** =hint
+You can use matrix[row,column] to extract elements from a matrix!
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+msg_success <- "Exactly!"
+test_mc(correct = 4)
+
+```
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:2ed95de982
+## Matrices III
+
+##### Proposed editing time: < 5 min. 
+##### Level: medium
+
+
+Have a look at the matrix E: 
+
+$$E = 
+\begin{bmatrix}
+3 & 2 & 1 & 9 \newline
+4 & 9 & 2 & 1 \newline
+1 & 6 & 1 & 7 \newline
+4 & 7 & 6 & 4
+\end{bmatrix}$$  
+
+Which command delivers the number of all elements in matrix B?
+
+
+*** =instructions
+- length[E]
+- E[?,?]
+- E[rows+columns]
+- E[rows, ] + E[ ,columns]
+
+*** =hint
+You can use matrix[row,column] to extract elements from a matrix, but you can not count rows and columns with this command.
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+msg_success <- "Exactly!"
+test_mc(correct = 1)
 
 ```
