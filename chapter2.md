@@ -3,7 +3,7 @@ title       : Problem Set 1 - Introduction to R
 description : Insert the chapter description here
 --- type:NormalExercise lang:r xp:100 skills:1 key:deda7304f0
 
-## Warm up and vectors I
+## Task 1: Warm up and vectors I
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: easy
@@ -65,7 +65,7 @@ success_msg("Nice work!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:df487377ba
 
-## Warm up and vectors II
+## Task 1: Warm up and vectors II
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: easy
@@ -134,7 +134,7 @@ success_msg("Nice work!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:8a0f1bc449
 
-## Warm up and vectors III
+## Task 1: Warm up and vectors III
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: easy
@@ -197,7 +197,7 @@ success_msg("Nice work!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:f23411b6a7
-## Warm up and vectors IV
+## Task 1: Warm up and vectors IV
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
@@ -259,7 +259,7 @@ success_msg("Nice work!")
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:34e0148626
-## Matrices I
+## Task 2: Matrices I
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
@@ -301,7 +301,7 @@ test_mc(correct = 3)
 
 
 --- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:dc47c431fc
-## Matrices II
+## Task 2: Matrices II
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
@@ -345,7 +345,7 @@ test_mc(correct = 4)
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:2ed95de982
-## Matrices III
+## Task 2: Matrices III
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
@@ -391,7 +391,7 @@ test_mc(correct = 1)
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:d6f26eda28
-## Working with data frames I
+## Task 3: Working with data frames I
 
 ##### Proposed editing time: < 10 min. 
 ##### Level: easy
@@ -443,7 +443,7 @@ success_msg("Nice work!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b8314b527f
-## Working with data frames II
+## Task 3: Working with data frames II
 
 ##### Proposed editing time: < 10 min. 
 ##### Level: medium
@@ -498,7 +498,7 @@ success_msg("Nice work!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:a06d11695e
-## Working with data frames III
+## Task 3: Working with data frames III
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: easy
@@ -556,14 +556,12 @@ success_msg("Nice work!")
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ca48b41f72
-## Working with data frames IV
+## Task 3: Working with data frames IV
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
 
-We want to learn more about birth weight. 
-
-Therefore you must check the descriptive statistics of the variable bwght. The variable `bwght` is already loaded in the workspace.
+We want to learn more about the birth weight. Therefore you can check the descriptive statistics of the variable `bwght`. The variable `bwght` is already loaded in the workspace. So you can use the R Console on the right side. 
 
 What is the average birth weight?
 
@@ -589,3 +587,93 @@ msg_success <- "Exactly!"
 test_mc(correct = 3)
 ```
 
+
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:21f224e94c
+## Task 3: Working with data frames V
+
+##### Proposed editing time: < 5 min. 
+##### Level: very easy
+
+Obviously you are able to work with the R Console. Than I have a very easy question:
+
+What is the minimum birth weight?
+
+
+*** =instructions
+- 86.0
+- 14.2
+- 92.9
+- 105.2
+
+
+*** =hint
+You can use the command `summary` to display descriptive statistics. 
+
+*** =pre_exercise_code
+```{r}
+bwght <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+```
+
+*** =sct
+```{r}
+msg_success <- "Exactly!"
+test_mc(correct = 1)
+```
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:e0afb176ef
+## Task 5: Random number generation
+
+##### Proposed editing time: < 10 min. 
+##### Level: medium
+
+At least, we want to learn something about random number generation. 
+
+
+*** =instructions
+- Generate `x` according to $x_i \sim N(0,9), i = 1,...,50$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise, we can not check your result.
+- Compute the mean, the variance and the standard deviation of `x` with the according commands.
+
+
+*** =hint
+- You can generate random variables with `rnorm`
+- rnorm(n, mean = ?, sd = ?)
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Do not forget to use set.seed
+
+
+# Store the random numbers in "x"
+x <- 
+
+```
+
+*** =solution
+```{r}
+set.seed(321)
+x <- rnorm(50, mean=0, sd=3)
+```
+
+*** =sct
+```{r}
+test_function("set.seed", incorrect_msg = "Did you use set.seed(321)?")
+test_function("mean", incorrect_msg = "Did you compute the mean with the according command?")
+test_function("sd", incorrect_msg = "Did you compute the standard deviation with the according command?")
+test_function("var", incorrect_msg = "Did you compute the variance with the according command?")
+
+test_error()
+success_msg("Nice work!")
+
+```
