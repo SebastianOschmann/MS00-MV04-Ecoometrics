@@ -208,11 +208,11 @@ $$d = \frac{1} {(e^{28} + log(9))} \cdot [7 \; 1.5 \; 3 \; 4 \; 9]$$
 
 
 *** =instructions
-i. Extract the third element of the vector d and store this element in i.
+- Extract the third element of the vector d and store this element in i.
 
-ii. Extract the the first two elements of the vector d and store this elements in ii.
+- Extract the the first two elements of the vector d and store this elements in ii.
 
-iii. Extract the last element of the vector d and store this element in iii.
+- Extract the last element of the vector d and store this element in iii.
 
 *** =hint
 You can use square brackets to extract elements from a vector!
@@ -361,6 +361,7 @@ $$E =
 4 & 7 & 6 & 4
 \end{bmatrix}$$  
 
+
 Which command delivers the number of all elements in matrix B?
 
 
@@ -384,4 +385,110 @@ You can use matrix[row,column] to extract elements from a matrix, but you can no
 msg_success <- "Exactly!"
 test_mc(correct = 1)
 
+```
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:d6f26eda28
+## Working with data frames I
+
+##### Proposed editing time: < 10 min. 
+##### Level: easy
+
+
+Have a look at Task 3 a) from Problem Set 1. 
+
+
+
+*** =instructions
+- Generate the variable `bwgth_vec`. The variable contains the values of the birth weights. Store the results in `bwgth_vec`.
+
+- Generate the variable `cigs_vec`. The variable contains the number of cigarettes smoked. Store the results in `bwgth_vec`.
+
+*** =hint
+
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Generate the vector bwght_vec
+bwght_vec <- 
+
+# Generate the vector cigs_vec
+cigs_vec <- 
+
+```
+
+*** =solution
+```{r}
+bwght_vec <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+cigs_vec  <- c(0, 6, 10, 20, 40, 0, 3, 30, 15, 40)
+```
+
+*** =sct
+```{r}
+test_object("bwght_vec", incorrect_msg = "Attention, something is wrong with bwght_vec!")
+test_object("cigs_vec", incorrect_msg = "Attention, something is wrong with cigs_vec!")
+
+test_error()
+success_msg("Nice work!")
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:b8314b527f
+## Working with data frames II
+
+##### Proposed editing time: < 10 min. 
+##### Level: medium
+
+
+Have a look at Task 3 b) and c) from Problem Set 1. 
+
+*** =instructions
+- Match the vectors `bwght_vec` and `cigs_vec` to a matrix named `mat`. The first column should contain the birth weight and the second column should contain the number of cigarettes smoked. 
+- Transform the matrix `mat` into a data frame and name it `data`.
+
+
+*** =hint
+
+
+
+*** =pre_exercise_code
+```{r}
+bwght_vec <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+cigs_vec  <- c(0, 6, 10, 20, 40, 0, 3, 30, 15, 40)
+```
+
+*** =sample_code
+```{r}
+### The vectors bwght_vec and cigs_vec are already loaded in the workspace ###
+
+# Create the matrix mat
+mat <- 
+
+# Transform the matrix mat into a data frame
+data <- 
+
+```
+
+*** =solution
+```{r}
+mat <- cbind(bwght_vec, cigs_vec)
+data <- data.frame(mat)
+```
+
+*** =sct
+```{r}
+test_object("mat", incorrect_msg = "Attention, something is wrong with the matrix mat!")
+test_object("data", incorrect_msg = "Attention, something is wrong with the data frame!")
+
+test_error()
+success_msg("Nice work!")
 ```
