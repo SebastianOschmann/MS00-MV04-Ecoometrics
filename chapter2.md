@@ -468,7 +468,7 @@ cigs_vec  <- c(0, 6, 10, 20, 40, 0, 3, 30, 15, 40)
 
 *** =sample_code
 ```{r}
-### The vectors bwght_vec and cigs_vec are already loaded in the workspace ###
+### The vectors "bwght_vec" and "cigs_vec" are already loaded in the workspace ###
 
 # Create the matrix mat
 mat <- 
@@ -488,6 +488,64 @@ data <- data.frame(mat)
 ```{r}
 test_object("mat", incorrect_msg = "Attention, something is wrong with the matrix mat!")
 test_object("data", incorrect_msg = "Attention, something is wrong with the data frame!")
+
+test_error()
+success_msg("Nice work!")
+```
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:a06d11695e
+## Working with data frames III
+
+##### Proposed editing time: < 10 min. 
+##### Level: medium
+
+
+Now, we want to learn how you can extract variables from a data frame.
+
+*** =instructions
+- Extract the birth weight variable from the data frame and store it in `bwght`.
+- Extract the cigarettes variable from the data frame and store it in `cigs`.
+
+
+*** =hint
+
+
+
+*** =pre_exercise_code
+```{r}
+bwght_vec <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+cigs_vec  <- c(0, 6, 10, 20, 40, 0, 3, 30, 15, 40)
+mat <- cbind(bwght_vec, cigs_vec)
+data <- data.frame(mat)
+```
+
+*** =sample_code
+```{r}
+### The data frame "data" is already loaded in the workspace ###
+
+# Extract the birth weight variable and store it in "bwght"
+bwght <-
+
+# Extract the cigarettes variable and store it in "cigs"
+cigs <- 
+
+
+```
+
+*** =solution
+```{r}
+bwght <- data$bwght_vec
+cigs <- data$cigs_vec
+```
+
+*** =sct
+```{r}
+test_object("bwght", incorrect_msg = "Attention, something is wrong with the the variable "bwght"!")
+test_object("cigs", incorrect_msg = "Attention, something is wrong with the  variable "cigs"!")
 
 test_error()
 success_msg("Nice work!")
