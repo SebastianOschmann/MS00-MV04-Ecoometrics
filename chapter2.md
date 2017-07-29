@@ -500,8 +500,8 @@ success_msg("Nice work!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:a06d11695e
 ## Working with data frames III
 
-##### Proposed editing time: < 10 min. 
-##### Level: medium
+##### Proposed editing time: < 5 min. 
+##### Level: easy
 
 
 Now, we want to learn how you can extract variables from a data frame.
