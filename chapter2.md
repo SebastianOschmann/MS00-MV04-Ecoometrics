@@ -550,3 +550,39 @@ test_object("cigs", incorrect_msg = "Attention, something is wrong with the  var
 test_error()
 success_msg("Nice work!")
 ```
+
+
+
+
+
+--- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:f838366b23
+## Working with data frames IV
+
+##### Proposed editing time: < 5 min. 
+##### Level: medium
+
+We want to learn more about birth weight. Therefore you must check the descriptive statistics of the variable bwght. The variable `bwght` is already loaded in the workspace.
+
+What is the average birth weight?
+
+
+*** =instructions
+- 115.5
+- 111.1
+- 113.2
+- 90.0
+
+
+*** =hint
+You can use the command `summary` to display descriptive statistics. 
+
+*** =pre_exercise_code
+```{r}
+bwght <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+```
+
+*** =sct
+```{r}
+msg_success <- "Exactly!"
+test_mc(correct = 3)
+```
