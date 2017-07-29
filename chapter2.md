@@ -555,13 +555,15 @@ success_msg("Nice work!")
 
 
 
---- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:f838366b23
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ca48b41f72
 ## Working with data frames IV
 
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
 
-We want to learn more about birth weight. Therefore you must check the descriptive statistics of the variable bwght. The variable `bwght` is already loaded in the workspace.
+We want to learn more about birth weight. 
+
+Therefore you must check the descriptive statistics of the variable bwght. The variable `bwght` is already loaded in the workspace.
 
 What is the average birth weight?
 
@@ -586,3 +588,4 @@ bwght <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
 msg_success <- "Exactly!"
 test_mc(correct = 3)
 ```
+
