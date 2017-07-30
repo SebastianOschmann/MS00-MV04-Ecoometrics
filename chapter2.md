@@ -286,7 +286,8 @@ $$C =
 
 Which command delivers the elements $1 \; 2 \; 3$?
 
-The matrix is loaded in the workspace and named `matrix`. So you can use the R Console on the right side to test the commands. 
+The matrix is loaded in the workspace and named `C`. You can use the R Console on the right side to test the commands!
+
 
 
 *** =instructions
@@ -296,12 +297,12 @@ The matrix is loaded in the workspace and named `matrix`. So you can use the R C
 - C[1]
 
 *** =hint
-You can use matrix[row,column] to extract elements from a matrix!
+- You can use matrix[row,column] to extract elements from a matrix!
 
 
 *** =pre_exercise_code
 ```{r}
-matrix <- cbind(c(1,2,3), c(4,5,6), c(7,8,9))
+C <- cbind(c(1,2,3), c(4,5,6), c(7,8,9))
 ```
 
 *** =sct
@@ -389,7 +390,7 @@ You can use matrix[row,column] to extract elements from a matrix, but you can no
 
 *** =pre_exercise_code
 ```{r}
-
+E <- cbind(c(3,4,1,4), c(2,9,6,7), c(1,2,1,6), c(9,1,7,4))
 ```
 
 *** =sct
@@ -419,7 +420,7 @@ Have a look at Task 3 a) from Problem Set 1.
 - Generate the variable `cigs_vec`. The variable contains the number of cigarettes smoked. Store the results in `bwgth_vec`.
 
 *** =hint
-
+- You can use `c` to combine values into a vector or list! 
 
 
 *** =pre_exercise_code
@@ -654,8 +655,7 @@ At least, we want to learn something about random number generation.
 
 
 *** =hint
-- You can generate random variables with `rnorm`
-- rnorm(n, mean = ?, sd = ?)
+- You can generate random variables with `rnorm(n, mean = ?, sd = ?)`
 
 *** =pre_exercise_code
 ```{r}
