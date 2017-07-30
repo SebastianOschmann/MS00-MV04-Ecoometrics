@@ -76,10 +76,11 @@ success_msg("Nice work!")
 Have a look at Task 1 b) from Problem Set 1. 
 
 *** =instructions
-Generate the variables with the corresponding variable names from the Task 1 b)
+Generate the variables with the corresponding variable names from the Task 1 b)!
 
 
 *** =hint
+Hint fehlt noch!
 
 *** =pre_exercise_code
 ```{r}
@@ -88,22 +89,22 @@ Generate the variables with the corresponding variable names from the Task 1 b)
 
 *** =sample_code
 ```{r}
-# Generate the variable u which contains 10.5
+# Generate the variable u
 u <- 
 
-# Generate the variable v which contains 2
+# Generate the variable v
 v <- 
 
-# Generate w 
+# Generate the variable w 
 w <- 
 
-# Generate x 
+# Generate the variable x 
 x <- 
 
-# Generate y 
+# Generate the variable y 
 y <- 
 
-# Generate z
+# Generate the variable z
 z <- 
 
 ```
@@ -139,13 +140,18 @@ success_msg("Nice work!")
 
 ## Task 1: Warm up and vectors III
 
-##### Proposed editing time: < 5 min. 
+##### Proposed editing time: < 10 min. 
 ##### Level: easy
 
-Have a look at Task 1 c) and Task 1 d) from Problem Set 1. 
+Generate the following vectors with the corresponding names!
+
 
 *** =instructions
-Generate the vectors with the corresponding names from the Task 1 c) and compute XY
+- $a \, = [1 \; 1 \; 1 \; 1 \; 1]$ 
+- $b \, = [1 \; 2 \; 3 \; 4 \; 5 \; 6 \; 7 \; 8 \; 9 \; 10]$
+- $c \, = [1 \; 2 \; 3 \; 4 \; 5 \; 6 \; 7 \; 8 \; 9 \; 10 \; 1 \; 1 \; 1 \; 1 \; 1]$
+- Compute: $2 \cdot b$
+- Compute: $\sqrt{b}$
 
 
 *** =hint
@@ -159,16 +165,16 @@ Generate the vectors with the corresponding names from the Task 1 c) and compute
 
 *** =sample_code
 ```{r}
-# Generate a vector containing five ones
+# Generate the vector a 
 a <- 
 
-# Generate a vector containing the sequence from one to ten
+# Generate the vector b
 b <- 
 
-# Generate a vector containg (1) the sequence from one to ten and (2) five ones 
+# Generate the vector c
 c <-
 
-# Multiply the vector a by 2 
+# Multiply the vector b by 2 
 
 
 # Compute the square root of the vector b
@@ -191,8 +197,8 @@ test_object("a", incorrect_msg = "Attention, something is wrong with the vector 
 test_object("b", incorrect_msg = "Attention, something is wrong with the vector b!")
 test_object("c", incorrect_msg = "Attention, something is wrong with the vector c!")
 
-test_output_contains("2*a", incorrect_msg = "A")
-test_output_contains("sqrt(b)", incorrect_msg = "B")
+test_output_contains("2*a", incorrect_msg = "Attention, something is wrong with the computation of `2*b`")
+test_output_contains("sqrt(b)", incorrect_msg = "Attention, something is wrong with the computation of `sqrt(b)`")
 
 
 test_error()
@@ -211,11 +217,11 @@ $$d = \frac{1} {(e^{28} + log(9))} \cdot [7 \; 1.5 \; 3 \; 4 \; 9]$$
 
 
 *** =instructions
-- Extract the third element of the vector d and store this element in i.
+- Extract the third element of the vector d and store this element in i!
 
-- Extract the the first two elements of the vector d and store this elements in ii.
+- Extract the the first two elements of the vector d and store this elements in ii!
 
-- Extract the last element of the vector d and store this element in iii.
+- Extract the last element of the vector d and store this element in iii!
 
 *** =hint
 You can use square brackets to extract elements from a vector!
@@ -228,14 +234,15 @@ d <- 1/(exp(28)+log(9))*c(7,1.5,3,4,9)
 
 *** =sample_code
 ```{r}
-# vector d has already been created
-# Subtask i.
+### vector d has already been created ###
+
+# Subtask i
 i <- 
 
-# Subtask ii.
+# Subtask ii
 ii <- 
 
-# Subtask iii.
+# Subtask iii
 iii <- 
 
 ```
@@ -279,6 +286,8 @@ $$C =
 
 Which command delivers the elements $1 \; 2 \; 3$?
 
+The matrix is loaded in the workspace and named `matrix`. So you can use the R Console on the right side to test the commands. 
+
 
 *** =instructions
 - C[1,2,3]
@@ -292,7 +301,7 @@ You can use matrix[row,column] to extract elements from a matrix!
 
 *** =pre_exercise_code
 ```{r}
-
+matrix <- cbind(c(1,2,3), c(4,5,6), c(7,8,9))
 ```
 
 *** =sct
