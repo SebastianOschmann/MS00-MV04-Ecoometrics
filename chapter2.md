@@ -8,13 +8,17 @@ description : Insert the chapter description here
 ##### Proposed editing time: < 5 min. 
 ##### Level: easy
 
-Have a look at Task 1 a) from Problem Set 1. 
+Compute the following numbers: 
 
 *** =instructions
-Compute the following numbers with the corresponding R commands
+- $\sqrt{798}$
+- $|-9|$
+- $10^3$
+- $\sqrt{log(43)}$
+
 
 *** =hint
-Und das steht unter hint
+Use the suggested functions.
 
 *** =pre_exercise_code
 ```{r}
@@ -39,16 +43,9 @@ Und das steht unter hint
 
 *** =solution
 ```{r}
-# Calculate the square root of 798 and store the result in i
 sqrt(798)
-
-# Calculate the absolute amount of - 9 and store the result in ii
 abs(-9)
-
-# Calculate ten to the power of three and store the result in iii
 10^3
-
-# Calculate the square root of the log of 43 and store the result in iv
 sqrt(log(43))
 
 ```
@@ -56,9 +53,15 @@ sqrt(log(43))
 *** =sct
 ```{r}
 # Test objects
-test_function("sqrt", incorrect_msg = "Something is wrong with the square root of 798. Did you use: sqrt( )?")
-test_function("abs", incorrect_msg = "Something is wrong with the absolute amount of - 9. Did you use: abs( )?")
-test_function("^", incorrect_msg = "Something is wrong with ten to the power of three. Did you use: ^ ?")
+test_function("sqrt", incorrect_msg = "Something is wrong with the square root of 798. Did you use: `sqrt( )`?")
+test_function("abs", incorrect_msg = "Something is wrong with the absolute amount of -9. Did you use: `abs( )`?")
+
+test_output_contains("sqrt(log(43))", incorrect_msg = "Something is wrong with the square root of the log of 43")
+test_output_contains("9", incorrect_msg = "Something is wrong with the absolute amount of -9!")
+test_output_contains("1000", incorrect_msg = "Something is wrong with ten to the power of three!")
+
+
+
 test_error()
 success_msg("Nice work!")
 ```
