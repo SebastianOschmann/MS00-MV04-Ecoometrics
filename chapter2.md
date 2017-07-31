@@ -43,9 +43,16 @@ Use the suggested functions.
 
 *** =solution
 ```{r}
+# Use sqrt() to calculate the square root of 798
 sqrt(798)
+
+# Use abs() to calculate the absolute amount of - 9
 abs(-9)
+
+# Use "^" to calculate ten to the power of three
 10^3
+
+# Calculate the square root of the log of 43
 sqrt(log(43))
 
 ```
@@ -53,14 +60,13 @@ sqrt(log(43))
 *** =sct
 ```{r}
 # Test objects
-test_function("sqrt", incorrect_msg = "Something is wrong with the square root of 798. Did you use: `sqrt( )`?")
+
 test_function("abs", incorrect_msg = "Something is wrong with the absolute amount of -9. Did you use: `abs( )`?")
 
+test_output_contains("sqrt(798)", incorrect_msg = "Something is wrong with the square root of 798. Did you use: `sqrt( )`?")
 test_output_contains("sqrt(log(43))", incorrect_msg = "Something is wrong with the square root of the log of 43")
 test_output_contains("9", incorrect_msg = "Something is wrong with the absolute amount of -9!")
 test_output_contains("1000", incorrect_msg = "Something is wrong with ten to the power of three!")
-
-
 
 test_error()
 success_msg("Nice work!")
@@ -111,12 +117,24 @@ z <-
 
 *** =solution
 ```{r}
+# Generate the variable u
 u <- 10.5
+ 
+# Generate the variable v
 v <- 2
+
+# Generate the variable w 
 w <- 3*u+v
+
+# Generate the variable x 
 x <- 3*(u+v)
+
+# Generate the variable y 
 y <- (3*u)+v
+
+# Generate the variable z
 z <- exp(2.5+v)
+
 ```
 
 *** =sct
@@ -184,11 +202,21 @@ c <-
 
 *** =solution
 ```{r}
+# Generate the vector a 
 a <- c(1,1,1,1,1)
+
+# Generate the vector b
 b <- c(1,2,3,4,5,6,7,8,9,10)
+
+# Generate the vector c
 c <- c(1,2,3,4,5,6,7,8,9,10, 1,1,1,1,1)
+
+# Multiply the vector b by 2 
 2*a
+
+# Compute the square root of the vector b
 sqrt(b)
+
 ```
 
 *** =sct
@@ -249,10 +277,16 @@ iii <-
 
 *** =solution
 ```{r}
-i   <- d[3]
-ii  <- d[1:2]
-iii <- d[5]
+### vector d has already been created ###
 
+# Subtask i
+i   <- d[3]
+
+# Subtask ii
+ii  <- d[1:2]
+
+# Subtask iii
+iii <- d[5]
 
 ```
 
@@ -374,6 +408,7 @@ $$E =
 4 & 7 & 6 & 4
 \end{bmatrix}$$  
 
+The matrix is loaded in the workspace and named `E`. You can use the R Console on the right side to test the commands!
 
 Which command delivers the number of all elements in matrix B?
 
@@ -440,8 +475,12 @@ cigs_vec <-
 
 *** =solution
 ```{r}
+# Generate the vector bwght_vec
 bwght_vec <- c(109, 129, 104, 119, 115, 86, 139, 116, 126, 89)
+
+# Generate the vector cigs_vec
 cigs_vec  <- c(0, 6, 10, 20, 40, 0, 3, 30, 15, 40)
+
 ```
 
 *** =sct
@@ -462,7 +501,7 @@ success_msg("Nice work!")
 ##### Level: medium
 
 
-Have a look at Task 3 b) and c) from Problem Set 1. 
+The vectors `bwght_vec` and `cigs_vec` are already loaded in the workspace. 
 
 *** =instructions
 - Match the vectors `bwght_vec` and `cigs_vec` to a matrix named `mat`. The first column should contain the birth weight and the second column should contain the number of cigarettes smoked. 
@@ -493,13 +532,19 @@ data <-
 
 *** =solution
 ```{r}
+### The vectors "bwght_vec" and "cigs_vec" are already loaded in the workspace ###
+
+# Create the matrix mat
 mat <- cbind(bwght_vec, cigs_vec)
+
+# Transform the matrix mat into a data frame
 data <- data.frame(mat)
+
 ```
 
 *** =sct
 ```{r}
-test_object("mat", incorrect_msg = "Attention, something is wrong with the matrix mat!")
+test_object("mat", incorrect_msg = "Attention, something is wrong with the matrix!")
 test_object("data", incorrect_msg = "Attention, something is wrong with the data frame!")
 
 test_error()
@@ -517,7 +562,8 @@ success_msg("Nice work!")
 ##### Level: easy
 
 
-Now, we want to learn how you can extract variables from a data frame.
+Now, we want to learn how you can extract variables from a data frame. The data frame `data` is already loaded in the workspace. 
+
 
 *** =instructions
 - Extract the birth weight variable from the data frame and store it in `bwght`.
@@ -551,14 +597,20 @@ cigs <-
 
 *** =solution
 ```{r}
+### The data frame "data" is already loaded in the workspace ###
+
+# Extract the birth weight variable and store it in "bwght"
 bwght <- data$bwght_vec
+
+# Extract the cigarettes variable and store it in "cigs"
 cigs <- data$cigs_vec
+
 ```
 
 *** =sct
 ```{r}
-test_object("bwght", incorrect_msg = "Attention, something is wrong with the the variable "bwght"!")
-test_object("cigs", incorrect_msg = "Attention, something is wrong with the  variable "cigs"!")
+test_object("bwght", incorrect_msg = "Attention, something is wrong with the the variable `bwght`!")
+test_object("cigs", incorrect_msg = "Attention, something is wrong with the  variable `cigs`!")
 
 test_error()
 success_msg("Nice work!")
@@ -612,7 +664,7 @@ test_mc(correct = 3)
 
 Obviously you are able to work with the R Console. Than I have a very easy question:
 
-What is the minimum birth weight?
+What is the minimum birth weight (variable `bwght`)?
 
 
 *** =instructions
