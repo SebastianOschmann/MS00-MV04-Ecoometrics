@@ -698,7 +698,7 @@ test_mc(correct = 1)
 ##### Proposed editing time: < 10 min. 
 ##### Level: medium
 
-At least, we want to learn something about random number generation. 
+At least, we want to learn something about random number generation. It is important that you do not change the last rows of the R Console!
 
 
 *** =instructions
@@ -760,16 +760,81 @@ sd(x)
 #   Do not change the following line!  #
 # With this line we check your results #
 ########################################
-y <- round(sum(x), 2)
+check_x <- round(sum(x), 2)
 ```
 
 *** =sct
 ```{r}
-test_object("y", incorrect_msg = "Attention, something is wrong with the random number generation!")
+test_object("check_x", incorrect_msg = "Attention, something is wrong with the random number generation!")
 
 test_output_contains("mean(x)", incorrect_msg = "Did you compute the mean of x with the according command?")
 test_output_contains("sd(x)", incorrect_msg = "Did you compute the standard deviation of x with the according command?")
 test_output_contains("var(x)", incorrect_msg = "Did you compute the variance of x with the according command?")
+
+test_error()
+success_msg("Nice work!")
+
+```
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:ff26156228
+## Task 5: Random number generation II
+
+##### Proposed editing time: < 5 min. 
+##### Level: medium
+
+Now we want to generate another random variable! It is important that you do not change the last rows of the R Console!
+
+*** =instructions
+- Generate `z` according to $z_i \sim N(0,\sqrt(2.5), i = 1,...,20$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise we can not check your result.
+
+*** =hint
+- You can generate random variables with `rnorm(n, mean = ?, sd = ?)`
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Do not forget to use set.seed
+
+
+# Store the random numbers in "z"
+z <- 
+
+
+
+########################################
+#   Do not change the following line!  #
+# With this line we check your results #
+########################################
+check_z <- round(sum(z), 2)
+
+```
+
+*** =solution
+```{r}
+# Do not forget to use set.seed
+set.seed(123)
+
+# Store the random numbers in "x"
+z <- rnorm(20, mean = 0, sd = sqrt(2.5))
+
+
+########################################
+#   Do not change the following line!  #
+# With this line we check your results #
+########################################
+check_z <- round(sum(z), 2)
+```
+
+*** =sct
+```{r}
+test_object("check_z", incorrect_msg = "Attention, something is wrong with the random number generation!")
 
 test_error()
 success_msg("Nice work!")
