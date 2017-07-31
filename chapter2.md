@@ -722,17 +722,51 @@ At least, we want to learn something about random number generation.
 # Store the random numbers in "x"
 x <- 
 
+# Compute the mean of x
+
+
+# Compute the variance of x
+
+
+# Compute the standard deviation of x
+
+
+########################################
+#   Do not change the following line!  #
+# With this line we check your results #
+########################################
+y <- round(sum(x), 2)
+
 ```
 
 *** =solution
 ```{r}
-set.seed(321)
-x <- rnorm(50, mean=0, sd=3)
+# Do not forget to use set.seed
+set.seed(123)
+
+# Store the random numbers in "x"
+x <- rnorm(50, mean = 0, sd = 3)
+
+# Compute the mean of x
+mean(x)
+
+# Compute the variance of x
+variance(x)
+
+# Compute the standard deviation of x
+sd(x)
+
+########################################
+#   Do not change the following line!  #
+# With this line we check your results #
+########################################
+y <- round(sum(x), 2)
 ```
 
 *** =sct
 ```{r}
-test_function("set.seed", incorrect_msg = "Did you use set.seed(321)?")
+test_object("y", incorrect_msg = "Attention, something is wrong with the random number generation!")
+
 test_function("mean", incorrect_msg = "Did you compute the mean with the according command?")
 test_function("sd", incorrect_msg = "Did you compute the standard deviation with the according command?")
 test_function("var", incorrect_msg = "Did you compute the variance with the according command?")
