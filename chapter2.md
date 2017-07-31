@@ -702,7 +702,7 @@ At least, we want to learn something about random number generation.
 
 
 *** =instructions
-- Generate `x` according to $x_i \sim N(0,9), i = 1,...,50$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise, we can not check your result.
+- Generate `x` according to $x_i \sim N(0,9), i = 1,...,50$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise we can not check your result.
 - Compute the mean, the variance and the standard deviation of `x` with the according commands.
 
 
@@ -751,7 +751,7 @@ x <- rnorm(50, mean = 0, sd = 3)
 mean(x)
 
 # Compute the variance of x
-variance(x)
+var(x)
 
 # Compute the standard deviation of x
 sd(x)
@@ -767,9 +767,9 @@ y <- round(sum(x), 2)
 ```{r}
 test_object("y", incorrect_msg = "Attention, something is wrong with the random number generation!")
 
-test_function("mean", incorrect_msg = "Did you compute the mean with the according command?")
-test_function("sd", incorrect_msg = "Did you compute the standard deviation with the according command?")
-test_function("var", incorrect_msg = "Did you compute the variance with the according command?")
+test_output_contains("mean(x)", incorrect_msg = "Did you compute the mean of x with the according command?")
+test_output_contains("sd(x)", incorrect_msg = "Did you compute the standard deviation of x with the according command?")
+test_output_contains("var(x)", incorrect_msg = "Did you compute the variance of x with the according command?")
 
 test_error()
 success_msg("Nice work!")
