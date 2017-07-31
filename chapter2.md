@@ -245,11 +245,11 @@ $$d = \frac{1} {(e^{28} + log(9))} \cdot [7 \; 1.5 \; 3 \; 4 \; 9]$$
 
 
 *** =instructions
-- Extract the third element of the vector d and store this element in i!
+- Extract the third element of the vector d!
 
-- Extract the the first two elements of the vector d and store this elements in ii!
+- Extract the the first two elements of the vector d!
 
-- Extract the last element of the vector d and store this element in iii!
+- Extract the last element of the vector d and store it in `d_last`! 
 
 *** =hint
 You can use square brackets to extract elements from a vector!
@@ -264,14 +264,15 @@ d <- 1/(exp(28)+log(9))*c(7,1.5,3,4,9)
 ```{r}
 ### vector d has already been created ###
 
-# Subtask i
-i <- 
+# Extract the third element of the vector d!
 
-# Subtask ii
-ii <- 
 
-# Subtask iii
-iii <- 
+# Extract the first two elements of the vector d!
+
+
+# Extract the last element of the vector d!
+d_last <- 
+
 
 ```
 
@@ -279,22 +280,22 @@ iii <-
 ```{r}
 ### vector d has already been created ###
 
-# Subtask i
-i   <- d[3]
+# Extract the third element of the vector d!
+d[3]
 
-# Subtask ii
-ii  <- d[1:2]
+# Extract the first two elements of the vector d!
+d[1:2]
 
-# Subtask iii
-iii <- d[5]
+# Extract the last element of the vector d!
+d_last <- d[5] # alternativ: d[length(d)]
 
 ```
 
 *** =sct
 ```{r}
-test_object("i", incorrect_msg = "Attention, something is wrong with the vector i!")
-test_object("ii", incorrect_msg = "Attention, something is wrong with the vector ii!")
-test_object("iii", incorrect_msg = "Attention, something is wrong with the vector iii!")
+test_output_contains("d[3]", incorrect_msg = "Attention, something is wrong with the third element of the vector d")
+test_output_contains("d[1:2]", incorrect_msg = "Attention, something is wrong with the first two elements of the vector d")
+test_object("d_last", incorrect_msg = "Attention, something is wrong with the vector d_last!")
 
 test_error()
 success_msg("Nice work!")
@@ -698,7 +699,7 @@ test_mc(correct = 1)
 ##### Proposed editing time: < 10 min. 
 ##### Level: medium
 
-At least, we want to learn something about random number generation. It is important that you do not change the last rows of the R Console!
+Now we want to learn something about random number generation. It is important that you do not change the last rows of the R Console!
 
 
 *** =instructions
@@ -785,7 +786,7 @@ success_msg("Nice work!")
 ##### Proposed editing time: < 5 min. 
 ##### Level: medium
 
-Now we want to generate another random variable! It is important that you do not change the last rows of the R Console!
+At last we want to generate another random variable! It is important that you do not change the last rows of the R Console!
 
 *** =instructions
 - Generate `z` according to $z_i \sim N(0,\sqrt(2.5), i = 1,...,20$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise we can not check your result.
@@ -821,7 +822,7 @@ check_z <- round(sum(z), 2)
 # Do not forget to use set.seed
 set.seed(123)
 
-# Store the random numbers in "x"
+# Store the random numbers in "z"
 z <- rnorm(20, mean = 0, sd = sqrt(2.5))
 
 
