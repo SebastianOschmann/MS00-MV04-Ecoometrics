@@ -263,6 +263,7 @@ d <- 1/(exp(28)+log(9))*c(7,1.5,3,4,9)
 *** =sample_code
 ```{r}
 ### vector d has already been created ###
+# befehl
 
 # Extract the third element of the vector d!
 
@@ -700,7 +701,7 @@ test_mc(correct = 1)
 ##### Level: medium
 
 Now we want to learn something about random number generation. It is important that you do not change the last rows of the R Console!
-
+Summe
 
 *** =instructions
 - Generate `x` according to $x_i \sim N(0,9), i = 1,...,50$. It is very important, that you use `set.seed(123)` before generating the numbers. Otherwise we can not check your result.
